@@ -7,6 +7,8 @@
 
 ## Install
 
+First download and install [GraphicsMagick](http://www.graphicsmagick.org/) or [ImageMagick](http://www.imagemagick.org/).
+
 ```sh
 $ npm install --save-dev gulp-hexsquare
 ```
