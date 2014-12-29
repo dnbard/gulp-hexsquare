@@ -2,7 +2,7 @@
 
 > Gulp plugin to conver hex textures to square
 
-[example](https://raw.githubusercontent.com/dnbard/gulp-hexsquare/master/screens/example.png)
+![example](https://raw.githubusercontent.com/dnbard/gulp-hexsquare/master/screens/example.png)
 
 
 ## Install
