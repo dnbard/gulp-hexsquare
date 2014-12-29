@@ -1,6 +1,8 @@
-# gulp-hexsquare [![Build Status](https://travis-ci.org/dnbard/gulp-hexsquare.svg?branch=master)](https://travis-ci.org/dnbard/gulp-hexsquare)
+# gulp-hexsquare
 
-> My super-duper gulp plugin
+> Gulp plugin to conver hex textures to square
+
+[example](https://raw.githubusercontent.com/dnbard/gulp-hexsquare/master/screens/example.png)
 
 
 ## Install
@@ -17,9 +19,14 @@ var gulp = require('gulp');
 var hexsquare = require('gulp-hexsquare');
 
 gulp.task('default', function () {
-	return gulp.src('src/file.ext')
-		.pipe(hexsquare())
-		.pipe(gulp.dest('dist'));
+    return gulp.src('src/file.ext')
+        .pipe(hexsquare({
+            size: {
+                width: 72,
+                height: 72
+            }
+        }))
+        .pipe(gulp.dest('dist'));
 });
 ```
 
@@ -30,12 +37,29 @@ gulp.task('default', function () {
 
 #### options
 
-##### foo
+##### resize
 
-Type: `boolean`  
-Default: `false`
+Type: `object`
+Optional
 
-Lorem ipsum.
+Square texture will be resized to given dimentionals.
+
+```js
+gulp.task('default', function () {
+    return gulp.src('src/file.ext')
+        .pipe(hexsquare({
+            size: {
+                width: 72,
+                height: 72
+            }.
+            resize: {
+                width: 32,
+                height: 32
+            }
+        }))
+        .pipe(gulp.dest('dist'));
+});
+```
 
 
 ## License
